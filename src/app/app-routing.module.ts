@@ -4,9 +4,14 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: 'Login', loadChildren: () => import('./pages/login/login.module').then(m => m.LoginModule) },
-  { path: '', redirectTo: '/studentlist', pathMatch: 'full'},
-  { path: '', loadChildren: './student/student.module#StudentModule' }
 
+  { path: '', redirectTo: '/studentlist', pathMatch: 'full',
+
+  },
+
+  { path: '', loadChildren: './student/student.module#StudentModule',
+
+  }
   ];
 
 @NgModule({
